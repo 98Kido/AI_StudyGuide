@@ -1,0 +1,1 @@
+The AI Study Guide Generator is a web application designed to help students quickly generate personalized study guides on a range of topics. By entering a subject like "JavaScript," "Python," or "Mathematics," users can receive curated study tips, resources, and practice questions tailored to their area of interest.
