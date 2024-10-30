@@ -4,17 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Study Guide Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #355C7D;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px; /* Increased padding for better usability */
+            height: 40px; /* Set a fixed height */
+            border-radius: 4px 0 0 4px;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #6C5B7B;
+            color: white;
+            padding: 10px 20px; /* Increased padding for the button */
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-left: 5px; /* Space between input and button */
+            height: 40px; /* Match the input height */
+            white-space: nowrap; /* Prevent button from wrapping */
+        }
+
+        button:hover {
+            background-color: #355C7D;
+        }
+
+        .section h3 {
+            color: #F67280;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .loading {
+            color: #C06C84;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
+    <h1>AI Study Guide Generator</h1>
     <div class="container">
-        <h1>AI Study Guide Generator</h1>
-        <p>Enter a topic, and get personalized study tips, resources, and questions!</p>
-        <input type="text" id="topic" placeholder="Enter a topic (e.g., 'Python Basics')">
-        <button onclick="generateGuide()">Generate Study Guide</button>
-        
-        <div id="output" class="output"></div>
+        <label for="topic">Enter a Topic (e.g., "JavaScript", "Python", "Mathematics"):</label>
+        <div class="input-group">
+            <input type="text" id="topic" placeholder="Type your study topic here...">
+            <button onclick="generateGuide()">Generate</button>
+        </div>
+
+        <div id="output"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
